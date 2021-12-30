@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" type="text/css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/mainApp/main.css' %}" type="text/css">
+</head>
+<body>
+    <aside>
+        <img src="{% static 'mainApp/image/python.png' %}", alt="Пример" id="image_python_logo">
+        <p class="logo">GrinPy</p>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Главная</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i>Обо мне</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fas fa-rss-square"></i>Новости</li></a>
+            <a href="/contact"><li><i class="fas fa-phone"></i>Контакты</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info>"<i class="fas fa-plus-circle"></i>Добавить запись </li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+</body>
+</html>

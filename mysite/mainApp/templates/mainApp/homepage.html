@@ -1,0 +1,13 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% load static %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ head_text }}</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae ea eius eveniet facere inventore molestiae unde veniam vitae voluptates?</p>
+        <button class="btn btn-warning">На страницу про нас</button>
+        {{ values.text }}
+    </div>
+{% endblock %}
