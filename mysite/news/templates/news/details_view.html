@@ -8,5 +8,7 @@
         <h1>{{ articles.title }}</h1>
         <p>{{ articles.date }}</p>
         <p>{{ articles.full_text }}</p>
+        <a href="{% url 'news-update' articles.id %}" class="btn btn-success">Обновить статью</a>
+        <a href="{% url 'news-delete' articles.id %}" class="btn btn-warning">Удалить статью</a>
     </div>
 {% endblock %}

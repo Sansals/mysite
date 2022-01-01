@@ -1,0 +1,15 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block title %} Удаление статьи {% endblock %}
+{% load static %}
+
+{% block content %}
+    <div class="features">
+        <h1>Удалить статью {{ articles.title }}?</h1>
+        <form method="post">
+            {% csrf_token %}
+
+            <button class="btn btn-warning" type="submit">Удалить...</button>
+        </form>
+    </div>
+{% endblock %}
