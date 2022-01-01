@@ -1,0 +1,12 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block title %} {{ articles.title }} {% endblock %}
+{% load static %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ articles.title }}</h1>
+        <p>{{ articles.date }}</p>
+        <p>{{ articles.full_text }}</p>
+    </div>
+{% endblock %}
